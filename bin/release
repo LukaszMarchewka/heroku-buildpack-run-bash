@@ -3,6 +3,7 @@
 cat <<EOF
 ---
 config_vars:
+  JAVA_HOME: .jdk/bin
   PATH: .jdk/bin:.sbt_home/bin:/usr/local/bin:/usr/bin:/bin
   JAVA_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops
   SBT_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops
