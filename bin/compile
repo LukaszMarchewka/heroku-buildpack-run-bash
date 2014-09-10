@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # fail fast
-# set -e
+set -e
 
 BUILD_DIR=$1
 
@@ -13,5 +13,4 @@ curl --silent --location http://heroku-jvm-common.s3.amazonaws.com/jvm-buildpack
 javaVersion=$(detect_java_version ${BUILD_DIR})
 echo -n "-----> Installing OpenJDK ${javaVersion}..."
 install_java ${BUILD_DIR} ${javaVersion}
-jdk_overlay ${BUILD_DIR}
 echo "done"
