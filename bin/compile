@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir> <env-dir>
 
 # fail fast
 set -e
 
 BUILD_DIR=$1
-echo "BUILD_DIR ${BUILD_DIR}"
 
 # load common necessary to install java
 curl --silent --location http://heroku-jvm-common.s3.amazonaws.com/jvm-buildpack-common.tar.gz | tar xzm
@@ -15,5 +15,3 @@ javaVersion=$(detect_java_version ${BUILD_DIR})
 echo -n "-----> Installing OpenJDK ${javaVersion}..."
 install_java ${BUILD_DIR} ${javaVersion}
 echo "done"
-
-echo `java -version`

@@ -3,11 +3,6 @@
 
 cat <<EOF
 ---
-config_vars:
-  JAVA_HOME: .jdk/bin
-  PATH: .jdk/bin:.sbt_home/bin:/usr/local/bin:/usr/bin:/bin
-  JAVA_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops
-  SBT_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops
 default_process_types:
-  web: bin/debtze-web -Dhttp.port=\$PORT
+  web: bin/start -mem 384 -Dhttp.port=${PORT} -J-Duser.timezone=UTC
 EOF
