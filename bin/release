@@ -1,3 +1,11 @@
 #!/bin/sh
 
-echo "--- {}"
+cat <<EOF
+---
+config_vars:
+  PATH: .jdk/bin:.sbt_home/bin:/usr/local/bin:/usr/bin:/bin
+  JAVA_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops
+  SBT_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops
+default_process_types:
+  web: bin/start -Dhttp.port=\$PORT
+EOF

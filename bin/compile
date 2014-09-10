@@ -1,4 +1,1 @@
 #!/bin/sh
-
-echo $PORT
-$1/bin/start
