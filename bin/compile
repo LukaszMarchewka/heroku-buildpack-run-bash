@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # install JDK
 javaVersion=$(detect_java_version ${BUILD_DIR})
