@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# fail fast
+set -e
+
+# load common necessary to install java
+curl --silent --location http://heroku-jvm-common.s3.amazonaws.com/jvm-buildpack-common.tar.gz | tar xzm
+. bin/util
+. bin/java
+
 # install JDK
 javaVersion=$(detect_java_version ${BUILD_DIR})
 echo -n "-----> Installing OpenJDK ${javaVersion}..."
