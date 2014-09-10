@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # fail fast
-set -e
+# set -e
 
 # load common necessary to install java
 curl --silent --location http://heroku-jvm-common.s3.amazonaws.com/jvm-buildpack-common.tar.gz | tar xzm
