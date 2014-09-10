@@ -3,6 +3,10 @@
 # fail fast
 # set -e
 
+echo "par1 $1"
+echo "par2 $2"
+echo "par3 $3"
+
 # load common necessary to install java
 curl --silent --location http://heroku-jvm-common.s3.amazonaws.com/jvm-buildpack-common.tar.gz | tar xzm
 . bin/util
