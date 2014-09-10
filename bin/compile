@@ -4,6 +4,7 @@
 set -e
 
 BUILD_DIR=$1
+echo "BUILD_DIR ${BUILD_DIR}"
 
 # load common necessary to install java
 curl --silent --location http://heroku-jvm-common.s3.amazonaws.com/jvm-buildpack-common.tar.gz | tar xzm
