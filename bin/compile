@@ -15,4 +15,4 @@ echo -n "-----> Installing OpenJDK ${javaVersion}..."
 install_java ${BUILD_DIR} ${javaVersion}
 echo "done"
 
-echo `java --version`
+echo `java -version`
