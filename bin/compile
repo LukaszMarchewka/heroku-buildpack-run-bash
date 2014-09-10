@@ -9,7 +9,7 @@ curl --silent --location http://heroku-jvm-common.s3.amazonaws.com/jvm-buildpack
 . bin/java
 
 # install JDK
-javaVersion=$(detect_java_version ${BUILD_DIR})
+javaVersion="1.7"
 echo -n "-----> Installing OpenJDK ${javaVersion}..."
 install_java ${BUILD_DIR} ${javaVersion}
 jdk_overlay ${BUILD_DIR}
